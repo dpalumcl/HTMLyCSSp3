@@ -1,0 +1,232 @@
+
+/* esto es un comentario en  archivos de estilos */ 
+
+
+header{
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caja{
+
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0px;
+
+
+}
+nav li{  /* aqui se usa nav<> y la sub tag li */
+    display: inline;
+    margin: 0 0 0 15px; /* margin tiene 4 parametros */
+           /* arriba, derecha, abajo, izquierda */
+           
+ }
+
+nav a{  /* aqui se referencia a la sib tag a que esta dentro  de nav<> */
+
+    text-transform: uppercase; /* deja todas las letras en mayusculas */
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+nav a:hover{   /* permite capturar la accion de mouse */
+    color: #c78c19;
+    text-decoration: underline;
+    /* con esto cambia el colo y subraya el menu cuando pasa el mouse*/
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    /* background: #CCCCCC; */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+ /*  forma extendida 
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    */
+
+    /* forma resumida de lo mismo */ 
+    border: 2px solid #000000;
+         /* width style color */
+    
+    /*
+    border-top-left-radius: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 50px;
+    */
+    /* la forma resumen 
+
+    border-radius: 10px 25px 40px 50px;
+*/
+    border-radius: 10px; /* si van ser los 4 iguales se declara uno */
+}
+
+.productos li:hover{     /* con esto cambia el color de los borde de lista de servicios */
+    border-color: #c78c19;
+
+    .producto-precio{ /* por probar; cambia el color del precio solo al pasar
+                       por encima del cuadro con el mouse */
+        color: blue;
+    }
+
+}
+
+.productos li:active{ /* detecta el click sobre algun cuadro de servicios y cambia el color del borde a verde  */
+
+    border-color: #088c19;
+    /* font-size: 33px;   esta linea no afecta por q la etiqueta q manda es h2*/
+
+    .producto-precio { /* mi linea agregada; cambia el color del precio al hacer click sobre el cuadro*/
+
+        color: red;
+    }   /* es una classa llamada dentro de otra classe */
+
+}
+.productos h2{
+    font-size:  30px;
+    font-weight: bold;
+
+}
+
+.productos li:hover h2{  /* aqui si afecta y se da el efecto esperado */
+    font-size:  33px;
+}
+
+.producto-desripcion{
+    font-size: 18px;
+
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    /* background: #CCCCCC;   deja fondo gris */
+    background: url(imagenes/bg.jpg);
+    padding: 40px; /* le da un espaciado entre los bordes */
+}
+
+.copyright{
+    color: white;
+    font-size: 13px;
+    margin: 20px;
+}
+
+main{
+    width: 940px;  /* valor de uso comun para centralizar algun objeto en pantalla */
+    margin: 0 auto;  
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{  /* p es reemplazado por legend */              
+    display: block; /* estas lineas centraliza en forma vertical las nombre de los cuadro de texto*/
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+/* este codigo se reemplaza por el q sigue  
+form input, form textarea{ /* se puede aplicar estilo a varias areas separadas por coma */
+  /*  display: block;  /* centraliza lasl cajas de texto */
+   /* margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}                        
+*/
+
+.input-padron{ /* se reemplaza por que ahora se usa llas llamadas  clases */
+     display: block;  /* centraliza lasl cajas de texto */
+     margin: 0 0 20px;
+     padding: 10px 25px;
+     width: 50%;
+  }   
+
+  .checkbox{
+    margin: 20px 0;
+  }
+
+  /* esto es una prueba
+  form p{
+
+    color: blue;
+  }
+
+  p{
+
+    color: red;
+  }
+
+  .test{
+    color: yellow;
+  }
+*/  
+
+.enviar{           /* se le da estilo al boton enviar  */
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    /* transition: 1s background; solo afecta al fondo del boton */
+    transition: 1s all; /* afecta a todos los parametros del boton */
+    cursor:pointer;
+}
+
+.enviar:hover{     /* si pasa el raton cambia de color el boton */
+    background: darkorange;
+    transform: scale(1.2);
+    
+    /* transform: scale(1.2) rotate(70deg); esto amplia el boton y lo rota*/
+
+    /*permite cambiar el tamaño del boton y rota 70grad. se escribe en la misma linea 
+    porque de otra forma solo aplica el ultimo efecto de transform, se puede desde css 3 */
+    
+    /* transform: rotate(70deg);*/ 
+}
+
+table {  /* le da una posicion con cierto margen */
+    margin: 40px 40px;
+}
+
+thead{    /* color de fondo de cabecera de tabla y celdas */
+    background: #555555; 
+    color: white;
+    font-weight: bold;
+}
+
+td,th{   /* dibuja las lineas de la tabla */
+    border: 1px solid #000000;
+    padding: 8px 8px; /* le da un espaciado interno en las celdas */
+}
